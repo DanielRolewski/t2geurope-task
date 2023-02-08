@@ -6,6 +6,6 @@
 </head>
 <body>
     <h1>T2G Europe Recruitment Task List</h1>
-    <a href='tasks/php/task-one/main.php' alt='php/task-one'>php/task-one</a>
+    <a href="tasks/php/task-one/main.php" alt="php/task-one">php/task-one</a>
 </body>
 </html>
