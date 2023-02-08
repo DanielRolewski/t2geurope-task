@@ -1,3 +1,14 @@
+<?php
+    if (!empty($_POST['textToDecrypt'])) {
+        require_once 'src/TextEncryption.php';
+
+        $textEncryption = new TextEncryption;
+        $_POST['isEncryptor'] = $_POST['isEncryptor'] == 'true' ? true : false;
+    
+        $decryptedText = $textEncryption->decryptor($_POST['textToDecrypt'], $_POST['isEncryptor']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +16,17 @@
     <title>Task Number One</title>
 </head>
 <body>
-<?php
-    require_once 'src/TextEncryption.php';
+    <form name="form" action="" method="post">
+        <input type="text" name="textToDecrypt" id="textToDecrypt">
 
-    $textEncryption = new TextEncryption;
-?>
+        <input type="radio" name="isEncryptor" id="isEncryptorTrue" value="true" checked>
+        <label for="isEncryptorTrue">Encrypt your text.</label>
+        <input type="radio" name="isEncryptor" id="isEncryptorFalse" value="false">
+        <label for="isEncryptorFalse">Decrypt your text.</label>
+
+        <input type="submit">
+    </form>
+    <p>Text before change: <?= $_POST['textToDecrypt'] ?></p>
+    <p>Text after change: <?= $decryptedText ?></p>
 </body>
 </html>
