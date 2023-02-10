@@ -1,14 +1,11 @@
 <?php
-
-/**
- * TextEncryption is responsible for text encryption and decryption.
- */
 class TextEncryption {
     /**
      * decryptor() is responsible for text decryption and encryption.
      * 
      * @param string $textToDecrypt text to decrypt or encrypt.
      * @param bool $isEncryptor if true, decryptor() method encrypt text instead of decrypting it.
+     * 
      * @return string
      */
     public function decryptor ($textToDecrypt, $isEncryptor): string {
