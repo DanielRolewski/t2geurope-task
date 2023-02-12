@@ -6,7 +6,12 @@
 </head>
 <body>
     <h1>T2G Europe Recruitment Task List</h1>
-    <a href="tasks/php/task-one/main.php" alt="php/task-one">php/task-one</a>
+    <p>
+        <a href="tasks/php/task-one/main.php" alt="php/task-one">php/task-one</a>
+    </p>
+    <p>
+        <a href="tasks/php/task-two/main.php" alt="php/task-two">php/task-two</a>
+    </p>
     <div>
         <p>Pierwsze zadanie z sekcji MySQL</p>
         <pre>
