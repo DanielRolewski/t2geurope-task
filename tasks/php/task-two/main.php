@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Task Number Two</title>
+    <title>Second task from PHP section</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        pre {
+            text-align: center;
+            font-size: 2.5em;
+        }
+    </style>
 </head>
 <body>
-    <form name="form" action="" method="post">
-        <label>
-            Input number that will be convert to LCD:
-            <input type="text" name="numberToConvert" id="numberToConvert">
-        </label>
-        <input type="submit">
+    <div class="nav justify-content-center bg-primary">
+        <h1 class="text-white">Second task from PHP section</h1>
+    </div>
+
+    <form class="form-group col mt-5 d-flex justify-content-center flex-column" name="form" method="post">
+            <input class="col-8 align-self-center form-control" type="text" name="numberToConvert" id="numberToConvert" placeholder="Input number that will be converted to LCD number">
+            <button type="submit" class="col-2 mt-3 align-self-center btn btn-primary">Confirm</button>
     </form>
+
+    <p class="h5 mt-4 text-center">Number will be displayed down below.</p>
+
     <?php
         if (!empty($_POST['numberToConvert'])) {
             if (is_numeric($_POST['numberToConvert'])) {
